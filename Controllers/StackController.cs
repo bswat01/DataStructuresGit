@@ -40,7 +40,7 @@ namespace dataStructuresGIT.Controllers
             if (myStack.Count == 0)
             {
                 ViewBag.MyStack = null;
-                ViewBag.Clear = "There is nothing in the stack to display!";
+                ViewBag.StackClear = "There is nothing in the stack to display!";
             }
             else
             {
@@ -52,7 +52,7 @@ namespace dataStructuresGIT.Controllers
         {
             if (myStack.Count == 0)
             {
-                ViewBag.Clear = "There is nothing in the stack to delete!";
+                ViewBag.StackClear = "There is nothing in the stack to delete!";
             }
             else
             {
@@ -64,7 +64,7 @@ namespace dataStructuresGIT.Controllers
         {
             myStack.Clear();
             ViewBag.MyStack = null;
-            ViewBag.Clear = "The Stack is now clear!";
+            ViewBag.StackClear = "The Stack is now clear!";
             return View("Index");
         }
         public ActionResult SearchStack()
@@ -75,7 +75,7 @@ namespace dataStructuresGIT.Controllers
 
             if (myStack.Count == 0)
             {
-                ViewBag.Clear = "There is nothing in the stack!";
+                ViewBag.StackClear = "There is nothing in the stack!";
             }
             else
             {
@@ -84,18 +84,18 @@ namespace dataStructuresGIT.Controllers
                 {
                     if (sSearch == vSearch)
                     {
-                        ViewBag.Clear = "Search results: \"New Entry 20\" was found!";
+                        ViewBag.StackClear = "Search results: \"New Entry 20\" was found!";
                     }
                 }
-                if (ViewBag.Clear == null)
+                if (ViewBag.StackClear == null)
                 {
-                    ViewBag.Clear = "Search results: \"New Entry 20\" was NOT found!";
+                    ViewBag.StackClear = "Search results: \"New Entry 20\" was NOT found!";
                 }
                 sw.Stop();
 
                 TimeSpan ts = sw.Elapsed;
 
-                ViewBag.Clear += " Time elapsed for search: " + ts;
+                ViewBag.StackClear += " Time elapsed for search: " + ts;
             }
             return View("Index");
         }

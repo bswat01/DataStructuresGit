@@ -25,12 +25,18 @@
                 foreach (var sData in ViewBag.MyQueue)
                 {
                     <p>@sData</p>
+
                 }
+                
             }
-            else if (ViewBag.Clear != null)
+            else if (ViewBag.QueueClear != null)
             {
-                <p>@ViewBag.Clear</p>
+                <p>@ViewBag.QueueClear</p>
+                
+            }
+            else
+            {
+                <img src="~/Images/Q.jpg" style="height: 100px; width: 100px;" class="center" />
             }
         }
-
     </div>

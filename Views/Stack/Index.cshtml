@@ -19,18 +19,22 @@
         <h1 style="text-align: center;">Stack</h1>
     </div>
     <div>
-          @{
+        @{
             if (ViewBag.MyStack != null)
             {
                 foreach (var sData in ViewBag.MyStack)
                 {
                     <p>@sData</p>
-                  }
+                }
             }
-            else if (ViewBag.Clear != null)
+            else if (ViewBag.StackClear != null)
             {
-                <p>@ViewBag.Clear</p>
+                <p>@ViewBag.StackClear</p>
             }
+            else
+            {
+                <img src="~/Images/Stacks.jpg" style="height: 100px; width: 100px;" class="center" />
             }
+        }
 
     </div>
