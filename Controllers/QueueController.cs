@@ -40,7 +40,7 @@ namespace dataStructuresGIT.Controllers
             if (myQueue.Count == 0)
             {
                 ViewBag.MyQueue = null;
-                ViewBag.Clear = "There is nothing in the queue to display!";
+                ViewBag.QueueClear = "There is nothing in the queue to display!";
             }
             else
             {
@@ -52,7 +52,7 @@ namespace dataStructuresGIT.Controllers
         {
             if (myQueue.Count == 0)
             {
-                ViewBag.Clear = "There is nothing in the queue to delete!";
+                ViewBag.QueueClear = "There is nothing in the queue to delete!";
             }
             else
             {
@@ -64,7 +64,7 @@ namespace dataStructuresGIT.Controllers
         {
             myQueue.Clear();
             ViewBag.MyQueue = null;
-            ViewBag.Clear = "The Queue is now clear!";
+            ViewBag.QueueClear = "The queue is now clear!";
             return View("Index");
         }
         public ActionResult SearchQueue()
@@ -75,7 +75,7 @@ namespace dataStructuresGIT.Controllers
 
             if (myQueue.Count == 0)
             {
-                ViewBag.Clear = "There is nothing in the queue!";
+                ViewBag.QueueClear = "There is nothing in the queue!";
             }
             else
             {
@@ -84,18 +84,18 @@ namespace dataStructuresGIT.Controllers
                 {
                     if (sSearch == vSearch)
                     {
-                        ViewBag.Clear = "Search results: \"New Entry 20\" was found!";
+                        ViewBag.QueueClear = "Search results: \"New Entry 20\" was found!";
                     }
                 }
-                if (ViewBag.Clear == null)
+                if (ViewBag.QueueClear == null)
                 {
-                    ViewBag.Clear = "Search results: \"New Entry 20\" was NOT found!";
+                    ViewBag.QueueClear = "Search results: \"New Entry 20\" was NOT found!";
                 }
                 sw.Stop();
 
                 TimeSpan ts = sw.Elapsed;
 
-                ViewBag.Clear += " Time elapsed for search: " + ts;
+                ViewBag.QueueClear += " Time elapsed for search: " + ts;
             }
             return View("Index");
         }

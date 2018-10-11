@@ -100,6 +100,13 @@
     <Content Include="Graphics\Braves.jpg" />
     <Content Include="Content\myStyles.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Ben.jpg" />
+    <Content Include="Images\Dictionary.jpg" />
+    <Content Include="Images\Jarom.jpg" />
+    <Content Include="Images\Jaxon.jpg" />
+    <Content Include="Images\Ken.jpg" />
+    <Content Include="Images\Q.jpg" />
+    <Content Include="Images\Stacks.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -170,7 +177,6 @@
     <Content Include="Views\Queue\Index.cshtml" />
     <Content Include="Views\Stack\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Index2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

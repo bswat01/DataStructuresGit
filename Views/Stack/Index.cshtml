@@ -10,7 +10,7 @@
     <a href="@Url.Action("DeleteFromStack", "Stack")" class="w3-bar-item w3-button">4. Delete from Stack</a>
     <a href="@Url.Action("ClearStack", "Stack")" class="w3-bar-item w3-button">5. Clear Stack</a>
     <a href="@Url.Action("SearchStack", "Stack")" class="w3-bar-item w3-button">6. Search Stack</a>
-    <a href="@Url.Action("Index", "Stack")" class="w3-bar-item w3-button">7. Return to Main Menu</a>
+    <a href="@Url.Action("Index", "Home")" class="w3-bar-item w3-button">7. Return to Main Menu</a>
 </div>
 
 <div style="margin-left:20%">
@@ -19,18 +19,22 @@
         <h1 style="text-align: center;">Stack</h1>
     </div>
     <div>
-          @{
+        @{
             if (ViewBag.MyStack != null)
             {
                 foreach (var sData in ViewBag.MyStack)
                 {
                     <p>@sData</p>
-                  }
+                }
             }
-            else if (ViewBag.Clear != null)
+            else if (ViewBag.StackClear != null)
             {
-                <p>@ViewBag.Clear</p>
+                <p>@ViewBag.StackClear</p>
             }
+            else
+            {
+                <img src="~/Images/Stacks.jpg" style="height: 100px; width: 100px;" class="center" />
             }
+        }
 
     </div>
