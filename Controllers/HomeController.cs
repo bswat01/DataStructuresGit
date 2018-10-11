@@ -6,12 +6,17 @@ using System.Web.Mvc;
 
 namespace dataStructuresGIT.Controllers
 {
-    public class ExitController : Controller
+    public class HomeController : Controller
     {
-        // GET: Exit
+        // GET: Home
         public ActionResult Index()
         {
-            return View();
+            return View("Index");
+        }
+
+        public ActionResult Exit()
+        {
+            return Redirect("https://byu.edu");
         }
     }
 }

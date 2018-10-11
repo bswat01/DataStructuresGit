@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Queue";
+}
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:20%">
+    <h3 class="w3-bar-item">Queue Menu</h3>
+    <a href="@Url.Action("AddOne", "Queue")" class="w3-bar-item w3-button">1. Add one time to Queue </a>
+    <a href="@Url.Action("HugeList", "Queue")" class="w3-bar-item w3-button">2. Add Huge List of Items to Queue</a>
+    <a href="@Url.Action("DisplayQueue", "Queue")" class="w3-bar-item w3-button">3. Display Queue</a>
+    <a href="@Url.Action("DeleteFromQueue", "Queue")" class="w3-bar-item w3-button">4. Delete from Queue</a>
+    <a href="@Url.Action("ClearQueue", "Queue")" class="w3-bar-item w3-button">5. Clear Queue</a>
+    <a href="@Url.Action("SearchQueue", "Queue")" class="w3-bar-item w3-button">6. Search Queue</a>
+    <a href="@Url.Action("Index", "Queue")" class="w3-bar-item w3-button">7. Return to Main Menu</a>
+</div>
+
+<div style="margin-left:20%">
+
+    <div class="w3-container w3-teal">
+        <h1 style="text-align: center;">Queue</h1>
+    </div>
+    <div>
+        @{
+            if (ViewBag.MyQueue != null)
+            {
+                foreach (var sData in ViewBag.MyQueue)
+                {
+                    <p>@sData</p>
+                }
+            }
+            else if (ViewBag.Clear != null)
+            {
+                <p>@ViewBag.Clear</p>
+            }
+        }
+
+    </div>

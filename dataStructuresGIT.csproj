@@ -151,7 +151,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DictionaryController.cs" />
-    <Compile Include="Controllers\ExitController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QueueController.cs" />
     <Compile Include="Controllers\StackController.cs" />
     <Compile Include="Global.asax.cs">
@@ -166,9 +166,11 @@
     <Content Include="Scripts\jquery-3.0.0.min.map" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Dictionary\Dictionary.cshtml" />
-    <Content Include="Views\Queue\Queue.cshtml" />
-    <Content Include="Views\Stack\Stack.cshtml" />
+    <Content Include="Views\Dictionary\Index.cshtml" />
+    <Content Include="Views\Queue\Index.cshtml" />
+    <Content Include="Views\Stack\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Index2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -179,7 +181,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Exit\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
