@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Stack";
+}
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:20%">
+    <h3 class="w3-bar-item">Stack Menu</h3>
+    <a href="@Url.Action("AddOne", "Stack")" class="w3-bar-item w3-button">1. Add one time to Stack </a>
+    <a href="@Url.Action("HugeList", "Stack")" class="w3-bar-item w3-button">2. Add Huge List of Items to Stack</a>
+    <a href="@Url.Action("DisplayStack", "Stack")" class="w3-bar-item w3-button">3. Display Stack</a>
+    <a href="@Url.Action("DeleteFromStack", "Stack")" class="w3-bar-item w3-button">4. Delete from Stack</a>
+    <a href="@Url.Action("ClearStack", "Stack")" class="w3-bar-item w3-button">5. Clear Stack</a>
+    <a href="@Url.Action("SearchStack", "Stack")" class="w3-bar-item w3-button">6. Search Stack</a>
+    <a href="@Url.Action("Index", "Stack")" class="w3-bar-item w3-button">7. Return to Main Menu</a>
+</div>
+
+<div style="margin-left:20%">
+
+    <div class="w3-container w3-teal">
+        <h1 style="text-align: center;">Stack</h1>
+    </div>
+    <div>
+          @{
+            if (ViewBag.MyStack != null)
+            {
+                foreach (var sData in ViewBag.MyStack)
+                {
+                    <p>@sData</p>
+                  }
+            }
+            else if (ViewBag.Clear != null)
+            {
+                <p>@ViewBag.Clear</p>
+            }
+            }
+
+    </div>

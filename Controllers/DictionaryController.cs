@@ -11,7 +11,7 @@ namespace dataStructuresGIT.Controllers
         // GET: Dictionary
         public ActionResult Index()
         {
-            return View();
+            return View("Index");
         }
     }
 }
