@@ -1,4 +1,7 @@
-﻿
+﻿<!--------------------------------------------------------------------------
+    Queue View. Runs very similar to Stack and Dictionary Views. 
+    For more info, check the comments for Dictionary View
+---------------------------------------------------------------------------->
 @{
     ViewBag.Title = "Queue";
 }
@@ -14,7 +17,6 @@
 </div>
 
 <div style="margin-left:20%">
-
     <div class="w3-container w3-teal">
         <h1 style="text-align: center;">Queue</h1>
     </div>
@@ -25,14 +27,11 @@
                 foreach (var sData in ViewBag.MyQueue)
                 {
                     <p>@sData</p>
-
                 }
-                
             }
             else if (ViewBag.QueueClear != null)
             {
-                <p>@ViewBag.QueueClear</p>
-                
+                <p>@ViewBag.QueueClear</p>    
             }
             else
             {
@@ -40,3 +39,4 @@
             }
         }
     </div>
+</div>
