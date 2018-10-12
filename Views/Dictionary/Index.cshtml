@@ -1,4 +1,6 @@
-﻿
+﻿<!------------------------------------------------------------------------------------------------
+    View for Dictionary controller.       
+------------------------------------------------------------------------------------------------->
 @{
     ViewBag.Title = "Dictionary!";
 }
@@ -15,12 +17,18 @@
 </div>
 
 <div style="margin-left:20%">
-
     <div class="w3-container w3-teal">
-        <h1 style="text-align: center;">Dictionary</h1>
-        
+        <h1 style="text-align: center;">Dictionary</h1> 
     </div>
     <div>
+        <!--------------------------------------------------------------------------
+          As long as something is in ViewBag.MyDict, it will loop through each KeyValuePair 
+            in ViewBag.MyDict. It will then return just the value of each item. 
+            In order for something to be in ViewBag.MyDict, the user must use that specific method
+            in the Dictionary controller.
+          If there is nothing in ViewBag.MyDict, then it checks whether ViewBag.DictClear has something in it
+            If so, it will display it. If not, it will display the dictionary image.
+        --------------------------------------------------------------------------->
         @{
             if (ViewBag.MyDict != null)
             {
@@ -38,5 +46,5 @@
                 <img src="~/Images/Dictionary.jpg" style="height: 100px; width: 100px;" class="center" />
             }
         }
-
     </div>
+</div>

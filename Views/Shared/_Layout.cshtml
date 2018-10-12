@@ -1,4 +1,8 @@
 ﻿<!DOCTYPE html>
+<!-------------------------------------------------------------------------------------------
+    Layout file. Each View will reference this file and run this code!
+    Meaning, each view will have a nice menu at the top :)
+-------------------------------------------------------------------------------------------->
 <html>
 <head>
     <meta charset="utf-8" />
@@ -12,9 +16,20 @@
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
+    <div style="width: 100%">
+        <h1 style="text-align:center;">Data Structures Project Using Git</h1>
+    </div>
+    <!-----------------------------------------------------------------------------------------
+    Url.Action links. The method passes two values to the function: 
+        The first parameter references the method within the controller
+            The second parameter references the Controller.
+    In essence, it creates a clickable link that references different paths.
+        "Go to the home controller and find the index method." 
+            That index method will return a view which will be displayed to the user.
+---------------------------------------------------------------------------------------------->
     <div class="w3-bar w3-blue w3-large">
         <a href="@Url.Action("Index" , "Home")"
-            class="w3-bar-item w3-button w3-mobile" style="width:20%">Home</a>
+            class="w3-bar-item w3-button w3-mobile" style="width:20%;">Home</a>
 
         <a href="@Url.Action("Index" , "Stack")"
             class="w3-bar-item w3-button w3-mobile" style="width:20%">Stack</a>
@@ -26,17 +41,12 @@
             class="w3-bar-item w3-button w3-mobile" style="width:20%">Dictionary</a>
 
         <a href="@Url.Action("Exit" , "Home")"
-            class="w3-bar-item w3-button w3-mobile" style="width:20%">Exit</a>
-      
+            class="w3-bar-item w3-button w3-mobile" style="width:20%">Exit</a> 
     </div>
-
     <div >
         @RenderBody()
         <hr />
-
-        
     </div>
-
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>

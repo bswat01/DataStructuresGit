@@ -8,21 +8,22 @@ namespace dataStructuresGIT.Controllers
 {
     public class DictionaryController : Controller
     {
+        //Create static variable to reference throughout the class. No object needed.
         static Dictionary<int, string> myDict = new Dictionary<int, string>();
 
-        // GET: Dictionary
+        //Returns basic view.
         public ActionResult Index()
         {
             return View("Index");
         }
-        //Method adds one entry to the stack
+        //Adds one entry to the dictionary
         public ActionResult AddOne()
         {
             myDict.Add((myDict.Count + 1), ("New Entry " + (myDict.Count + 1)));
 
             return View("Index");
         }
-        //Method adds 2000 entries to the stack
+        //Adds 2000 entries to the dictionary
         public ActionResult HugeList()
         {
             myDict.Clear();
@@ -33,7 +34,7 @@ namespace dataStructuresGIT.Controllers
 
             return View("Index");
         }
-
+        //Sends the viewbag the dictionary variable. If there is nothing in the variable, an error message will display 
         public ActionResult DisplayDict()
         {
             if (myDict.Count == 0)
@@ -47,6 +48,7 @@ namespace dataStructuresGIT.Controllers
             }
             return View("Index");
         }
+        //Deletes the entry from the dictionary relating to the count of the dictionary. 
         public ActionResult DeleteFromDict()
         {
             if (myDict.Count == 0)
@@ -59,6 +61,7 @@ namespace dataStructuresGIT.Controllers
             }
             return View("Index");
         }
+        //Clears the dictionary
         public ActionResult ClearDict()
         {
             myDict.Clear();
@@ -66,6 +69,7 @@ namespace dataStructuresGIT.Controllers
             ViewBag.DictClear = "The dictionary is now clear!";
             return View("Index");
         }
+        //Searches the dictionary for New Entry 20. Calculates clock time for how long the program takes to find it.
         public ActionResult SearchDict()
         {
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();

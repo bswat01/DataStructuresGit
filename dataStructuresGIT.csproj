@@ -101,10 +101,14 @@
     <Content Include="Content\myStyles.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\Ben.jpg" />
+    <Content Include="Images\Ben2.jpg" />
     <Content Include="Images\Dictionary.jpg" />
     <Content Include="Images\Jarom.jpg" />
+    <Content Include="Images\Jarom2.jpg" />
     <Content Include="Images\Jaxon.jpg" />
+    <Content Include="Images\Jaxon2.jpg" />
     <Content Include="Images\Ken.jpg" />
+    <Content Include="Images\Ken2.jpg" />
     <Content Include="Images\Q.jpg" />
     <Content Include="Images\Stacks.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
