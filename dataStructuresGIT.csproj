@@ -96,9 +96,21 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="Graphics\Braves.jpg" />
     <Content Include="Content\myStyles.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Ben.jpg" />
+    <Content Include="Images\Ben2.jpg" />
+    <Content Include="Images\Dictionary.jpg" />
+    <Content Include="Images\Jarom.jpg" />
+    <Content Include="Images\Jarom2.jpg" />
+    <Content Include="Images\Jaxon.jpg" />
+    <Content Include="Images\Jaxon2.jpg" />
+    <Content Include="Images\Ken.jpg" />
+    <Content Include="Images\Ken2.jpg" />
+    <Content Include="Images\Q.jpg" />
+    <Content Include="Images\Stacks.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -126,6 +138,7 @@
     <Content Include="Scripts\jquery-3.0.0.min.js" />
     <Content Include="Scripts\jquery-3.0.0.slim.js" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\myScripts.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
@@ -149,7 +162,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DictionaryController.cs" />
-    <Compile Include="Controllers\ExitController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QueueController.cs" />
     <Compile Include="Controllers\StackController.cs" />
     <Compile Include="Global.asax.cs">
@@ -162,6 +175,12 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Dictionary\Index.cshtml" />
+    <Content Include="Views\Queue\Index.cshtml" />
+    <Content Include="Views\Stack\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -172,10 +191,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Dictionary\" />
-    <Folder Include="Views\Exit\" />
-    <Folder Include="Views\Queue\" />
-    <Folder Include="Views\Stack\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

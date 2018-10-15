@@ -1,0 +1,50 @@
+﻿<!------------------------------------------------------------------------------------------------
+    View for Dictionary controller.       
+------------------------------------------------------------------------------------------------->
+@{
+    ViewBag.Title = "Dictionary!";
+}
+
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:20%">
+    <h3 class="w3-bar-item">Dictionary Menu</h3>
+    <a href="@Url.Action("AddOne", "Dictionary")" class="w3-bar-item w3-button">1. Add one time to Dictionary </a>
+    <a href="@Url.Action("HugeList", "Dictionary")" class="w3-bar-item w3-button">2. Add Huge List of Items to Dictionary</a>
+    <a href="@Url.Action("DisplayDict", "Dictionary")" class="w3-bar-item w3-button">3. Display Dictionary</a>
+    <a href="@Url.Action("DeleteFromDict", "Dictionary")" class="w3-bar-item w3-button">4. Delete from Dictionary</a>
+    <a href="@Url.Action("ClearDict", "Dictionary")" class="w3-bar-item w3-button">5. Clear Dictionary</a>
+    <a href="@Url.Action("SearchDict", "Dictionary")" class="w3-bar-item w3-button">6. Search Dictionary</a>
+    <a href="@Url.Action("Index", "Home")" class="w3-bar-item w3-button">7. Return to Main Menu</a>
+</div>
+
+<div style="margin-left:20%">
+    <div class="w3-container w3-teal">
+        <h1 style="text-align: center;">Dictionary</h1> 
+    </div>
+    <div>
+        <!--------------------------------------------------------------------------
+          As long as something is in ViewBag.MyDict, it will loop through each KeyValuePair 
+            in ViewBag.MyDict. It will then return just the value of each item. 
+            In order for something to be in ViewBag.MyDict, the user must use that specific method
+            in the Dictionary controller.
+          If there is nothing in ViewBag.MyDict, then it checks whether ViewBag.DictClear has something in it
+            If so, it will display it. If not, it will display the dictionary image.
+        --------------------------------------------------------------------------->
+        @{
+            if (ViewBag.MyDict != null)
+            {
+                foreach (KeyValuePair<int, string> sData in ViewBag.MyDict)
+                {
+                    <p>@sData.Value</p>
+                }
+            }
+            else if (ViewBag.DictClear != null)
+            {
+                <p>@ViewBag.DictClear</p>
+            }
+            else
+            {
+                <img src="~/Images/Dictionary.jpg" style="height: 100px; width: 100px;" class="center" />
+            }
+        }
+    </div>
+</div>
