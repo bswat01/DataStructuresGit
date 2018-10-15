@@ -8,10 +8,15 @@ namespace dataStructuresGIT.Controllers
 {
     public class DictionaryController : Controller
     {
+
+        //I love Ben
+        // GET: Dictionary
+
         //Create static variable to reference throughout the class. No object needed.
         static Dictionary<int, string> myDict = new Dictionary<int, string>();
 
         //Returns basic view.
+
         public ActionResult Index()
         {
             return View("Index");
